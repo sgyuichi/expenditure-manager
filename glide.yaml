@@ -1,0 +1,5 @@
+package: cropchat-provider
+import:
+- package: github.com/gorilla/mux
+- package: github.com/sirupsen/logrus
+- package: github.com/sarulabs/di

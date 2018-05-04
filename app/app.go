@@ -2,7 +2,6 @@ package app
 
 import (
 	"expenditure-manager/src/repo"
-	"fmt"
 	"time"
 
 	"github.com/sarulabs/di"
@@ -29,7 +28,6 @@ func Init() di.Context {
 		Name:  "expenditure-repo-factory",
 		Scope: di.Request,
 		Build: func(ctx di.Context) (interface{}, error) {
-			fmt.Println("get rpeo dac")
 			return &repo.ExpenditureRepoFactory{
 				Session:    ctx.Get("mongo").(*mgo.Session),
 				DataBase:   "moneymind",
